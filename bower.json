@@ -1,0 +1,17 @@
+{
+  "name": "mytutorial",
+  "version": "0.0.0",
+  "authors": [
+    "deepjyoti941 <deepjyoti941@gmail.com>"
+  ],
+  "description": "\"creating own tutorial\"",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "toastr": "~2.0.1",
+    "angular": "~1.2.13",
+    "angular-resource": "~1.2.13",
+    "angular-route": "~1.2.13"
+  }
+}

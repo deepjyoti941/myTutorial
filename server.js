@@ -31,6 +31,7 @@ app.get('/partials/:partialPath', function(req, res) {
 	res.render('partials/' + req.params.partialPath);
 });
 
+//connecting to mongodb database and creating mytutorial db
 mongoose.connect('mongodb://localhost/mytutorial');
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));
@@ -38,8 +39,19 @@ db.once('open', function callback(){
 	console.log('mytutorial db is opened..');
 });
 
+//creating schema for db
+var messageSchema = mongoose.Schema({message: String});
+var Message = mongoose.model('Message', messageSchema);
+var mongoMessage;
+Message.findOne().exec(function(err, messageDoc){
+	mongoMessage= messageDoc.message;
+});
+
+//pass the mongoMessage to our view index
 app.get('*', function(req, res){
-	res.render('index');
+	res.render('index', {
+		mongoMessage: mongoMessage
+	});
 });
 
 var port = 3030;

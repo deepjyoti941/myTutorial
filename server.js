@@ -20,10 +20,17 @@ app.configure(function(){
 			src: __dirname + '/public',
 			compile: compile
 		}
-	))
+	));
+	app.use(express.static(__dirname + '/public')); //serve the file which mathches the requested file with inside public dir
+
 });
 
-app.use(express.static(__dirname + '/public')); //serve the file which mathches the requested file with inside public dir
+//serving angular.js partials files
+app.get('/partials/:partialPath', function(req, res) {
+	res.render('partials/' + req.params.partialPath);
+});
+
+
 
 app.get('*', function(req, res){
 	res.render('index');

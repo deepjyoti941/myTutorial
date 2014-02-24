@@ -1,5 +1,6 @@
 var express = require('express'),
-	stylus = require('stylus'); //for static route handling i.e serving static files,css files	
+	stylus = require('stylus'), //for static route handling i.e serving static files,css files	
+	mongoose = require('mongoose');
 
 //creating node enviroment variable
 var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -30,7 +31,12 @@ app.get('/partials/:partialPath', function(req, res) {
 	res.render('partials/' + req.params.partialPath);
 });
 
-
+mongoose.connect('mongodb://localhost/mytutorial');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error...'));
+db.once('open', function callback(){
+	console.log('mytutorial db is opened..');
+});
 
 app.get('*', function(req, res){
 	res.render('index');

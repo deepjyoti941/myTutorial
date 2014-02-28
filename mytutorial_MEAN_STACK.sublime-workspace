@@ -71,7 +71,7 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 870,
+				"buffer_size": 1669,
 				"line_ending": "Unix"
 			}
 		},
@@ -79,7 +79,7 @@
 			"file": "server/views/index.jade",
 			"settings":
 			{
-				"buffer_size": 90,
+				"buffer_size": 97,
 				"line_ending": "Unix"
 			}
 		},
@@ -209,20 +209,21 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 870,
+						"buffer_size": 1669,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								541,
-								541
+								367,
+								367
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -237,15 +238,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 90,
+						"buffer_size": 97,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								0,
+								0
 							]
 						],
 						"settings":
@@ -307,7 +308,9 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -379,7 +382,7 @@
 		[
 			[
 				"",
-				"~/www/projects/laravel_backbone.sublime-project"
+				"~/www/media_ant.sublime-project"
 			]
 		],
 		"width": 380.0

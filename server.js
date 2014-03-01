@@ -31,11 +31,14 @@ app.get('/partials/:partialPath', function(req, res) {
 	res.render('partials/' + req.params.partialPath);
 });
 
-//connecting to local development mongodb database and creating mytutorial db
-//mongoose.connect('mongodb://localhost/mytutorial');
-
-//connecting to deployment mongodb server i.e mongolab
-mongoose.connect('mongodb://deepjyoti941:mytutorial@ds033569.mongolab.com:33569/mytutorial');
+/*choose the database connection stream based on enviroment ..local development or deployed*/
+if(env == 'development') {
+	//connecting to local development mongodb database and creating mytutorial db
+	mongoose.connect('mongodb://localhost/mytutorial');	
+}else {
+	//connecting to deployment mongodb server i.e mongolab
+	mongoose.connect('mongodb://deepjyoti941:mytutorial@ds033569.mongolab.com:33569/mytutorial');
+}
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error...'));

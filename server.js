@@ -47,18 +47,16 @@ db.once('open', function callback(){
 });
 
 //creating schema for db
-var messageSchema = mongoose.Schema({message: String});
-var Message = mongoose.model('Message', messageSchema);
-var mongoMessage;
-Message.findOne().exec(function(err, messageDoc){
-	mongoMessage= messageDoc.message;
-});
+// var messageSchema = mongoose.Schema({message: String});
+// var Message = mongoose.model('Message', messageSchema);
+// var mongoMessage;
+// Message.findOne().exec(function(err, messageDoc){
+// 	mongoMessage= messageDoc.message;
+// });
 
 //pass the mongoMessage to our view index
 app.get('*', function(req, res){
-	res.render('index', {
-		mongoMessage: mongoMessage
-	});
+	res.render('index');
 });
 
 var port = process.env.PORT || 3030;

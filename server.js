@@ -27,8 +27,8 @@ app.configure(function(){
 });
 
 //serving angular.js partials files
-app.get('/partials/:partialPath', function(req, res) {
-	res.render('partials/' + req.params.partialPath);
+app.get('/partials/*', function(req, res) {
+	res.render('../../public/app/' + req.params);
 });
 
 /*choose the database connection stream based on enviroment ..local development or deployed*/

@@ -22,6 +22,5 @@ module.exports = function(config) {
   		User.create({firstname:'deepjyoti',lastname:'khakhlary', username:'deepjyoti941',});
   		User.create({firstname:'deep', lastname:'khakhlary', username:'deep88'});
   	}
-  })  
+  });  
  }
- 

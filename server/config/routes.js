@@ -13,7 +13,9 @@ module.exports = function(app) {
     res.end();
   });
 
-  app.get('*', function(req, res){
-    res.render('index');
+  app.get('*', function(req, res) {
+    res.render('index', {
+      bootstrappedUser: req.user
+    });
   });
 }

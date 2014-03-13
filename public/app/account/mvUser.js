@@ -1,6 +1,8 @@
 angular.module('app').factory('mvUser', function($resource) {
 	
-	var UserResource = $resource('/api/users/:id', {_id: "@id"});
+	var UserResource = $resource('/api/users/:id', {_id: "@id"},{
+		update: {method:'PUT', isArray:false}
+	});
 
 	//adding isAdmin method to every instance of UserResource
 	UserResource.prototype.isAdmin = function() {

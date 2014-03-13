@@ -3,11 +3,15 @@ var mongoose = require('mongoose'),
 
   //creating schema for users
   var userSchema = mongoose.Schema({
-  	firstname: String,
-  	lastname: String,
-  	username: String,
-    salt: String,
-    hashed_pwd: String,
+  	firstname: {type:String, required:'{PATH} is required'},
+  	lastname: {type:String, required:'{PATH} is required'},
+  	username: {
+  		type: String,
+  		required: '{PATH} is required',
+  		unique: true
+  	},
+    salt: {type:String, required:'{PATH} is required'},
+    hashed_pwd: {type:String, required:'{PATH} is required'},
     roles: [String]
   });
 

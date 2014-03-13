@@ -4,9 +4,9 @@
             li
                 a(href="/signup") Sign up
         .form-group
-            input.form-control(placeholder="Email", ng-model="username")
+            input.form-control(placeholder="Email", ng-model="username",required)
         .form-group
-            input.form-control(type="password", placeholder="Password", ng-model="password")
+            input.form-control(type="password", placeholder="Password", ng-model="password",required)
         button.btn.btn-primary(ng-click="signin(username,password)") Sign In
     ul.nav.navbar-nav.navbar-right(ng-show="identity.isAuthenticated()")
         li.dropdown

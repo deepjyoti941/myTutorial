@@ -9094,11 +9094,11 @@ function ensureSafeMemberName(name, fullExpression, allowConstructor) {
         'Referencing "constructor" field in Angular expressions is disallowed! Expression: {0}',
         fullExpression);
   }
-  if (name.charAt(0) === '_' || name.charAt(name.length-1) === '_') {
-    throw $parseMinErr('isecprv',
-        'Referencing private fields in Angular expressions is disallowed! Expression: {0}',
-        fullExpression);
-  }
+  // if (name.charAt(0) === '_' || name.charAt(name.length-1) === '_') {
+  //   throw $parseMinErr('isecprv',
+  //       'Referencing private fields in Angular expressions is disallowed! Expression: {0}',
+  //       fullExpression);
+  // }
   return name;
 }
 

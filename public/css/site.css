@@ -24,6 +24,13 @@ footer p {
 .navbar-form button {
   margin-left: 10px;
 }
+.top-padding-med {
+  padding-top: 10px;
+}
+.margin-left-med {
+  margin-left: 10px;
+  margin-right: 28px;
+}
 .toast-top-right {
   top: 70px;
 }
